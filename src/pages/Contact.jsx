@@ -15,8 +15,8 @@ const Contact = () => {
                     <div className="bg-indigo-50 p-6 rounded-lg border border-indigo-100">
                         <h2 className="text-lg font-semibold mb-2 text-indigo-900">General Support</h2>
                         <p className="mb-4 text-gray-700">For help with the calculator or to report issues:</p>
-                        <a href="mailto:support@metalcalculator.com" className="text-indigo-600 font-medium hover:underline text-lg">
-                            support@metalcalculator.com
+                        <a href="mailto:support@dhbjcnd123.in" className="text-indigo-600 font-medium hover:underline text-lg">
+                            support@dhbjcnd123.in
                         </a>
                         <p className="text-sm text-gray-500 mt-2">
                             We aim to respond within 24-48 hours.
@@ -26,8 +26,8 @@ const Contact = () => {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                         <h2 className="text-lg font-semibold mb-2 text-gray-900">Business & Advertising</h2>
                         <p className="mb-4 text-gray-700">For partnership or advertising opportunities:</p>
-                        <a href="mailto:ads@metalcalculator.com" className="text-indigo-600 font-medium hover:underline">
-                            ads@metalcalculator.com
+                        <a href="mailto:ads@dhbjcnd123.in" className="text-indigo-600 font-medium hover:underline">
+                            ads@dhbjcnd123.in
                         </a>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Contact = () => {
                 <div className="mt-8 pt-6 border-t">
                     <h2 className="text-xl font-semibold mb-3">Mailing Address</h2>
                     <p className="text-gray-600">
-                        Metal Calculator Operations<br />
+                        DHBJ CND Operations<br />
                         (Digital Only - No Physical Office Visiting Hours)
                     </p>
                 </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import CookieBanner from './components/CookieBanner';
 import VisitorCounter from './components/VisitorCounter';
 
@@ -11,7 +11,7 @@ const RegularDashboard = ({ children }) => {
                         🧮 Metal Calculator
                     </h1>
                     <nav className="text-sm">
-                        <a href="/about" className="hover:text-indigo-200">About</a>
+                        <Link to="/about" className="hover:text-indigo-200">About</Link>
                     </nav>
                 </div>
             </header>
@@ -24,9 +24,9 @@ const RegularDashboard = ({ children }) => {
                         Disclaimer: This tool is for estimation purposes only. Always verify with professional assaying.
                     </p>
                     <div className="flex justify-center gap-6 text-sm flex-wrap">
-                        <a href="/privacy-policy" className="hover:text-white">Privacy Policy</a>
-                        <a href="/terms" className="hover:text-white">Terms of Service</a>
-                        <a href="/contact" className="hover:text-white">Contact Us</a>
+                        <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-white">Terms of Service</Link>
+                        <Link to="/contact" className="hover:text-white">Contact Us</Link>
                     </div>
                     <p className="mt-4 text-xs text-gray-500">© {new Date().getFullYear()} Metal Calculator. All rights reserved.</p>
                     <VisitorCounter />

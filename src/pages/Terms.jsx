@@ -25,7 +25,7 @@ const Terms = () => {
 
                 <h2 className="text-xl font-semibold mb-3">4. Limitation of Liability</h2>
                 <p className="mb-4">
-                    In no event shall Metal Calculator or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on this website.
+                    In no event shall DHBJ CND or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on this website.
                 </p>
 
                 <h2 className="text-xl font-semibold mb-3">5. Accuracy of Materials</h2>
@@ -40,7 +40,7 @@ const Terms = () => {
 
                 <h2 className="text-xl font-semibold mb-3">7. Contact Us</h2>
                 <p className="mb-4">
-                    If you have any questions about these Terms, please contact us at support@metalcalculator.com.
+                    If you have any questions about these Terms, please contact us at support@dhbjcnd123.in.
                 </p>
             </div>
         </RegularDashboard>
