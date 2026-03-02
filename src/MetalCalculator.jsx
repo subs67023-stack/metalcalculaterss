@@ -8,6 +8,11 @@ import autoTable from 'jspdf-autotable';
 const MetalCalculator = () => {
   const [calculatorType, setCalculatorType] = useState('type1');
 
+  // Ad Overlay State
+  const [showAdOverlay, setShowAdOverlay] = useState(false);
+  const [adCountdown, setAdCountdown] = useState(5);
+  const [pendingCalc, setPendingCalc] = useState(null);
+
   // Type 1 State (Previously Type 4 - Multi-Batch)
   const [type1Data, setType1Data] = useState({
     name: '',
@@ -35,13 +40,32 @@ const MetalCalculator = () => {
   });
   const [type3Result, setType3Result] = useState(null);
 
-  // Type 4 State - Dakh Mel 37
-  const [type4Data, setType4Data] = useState({
-    name: '',
-    silverWeight: '',
-    tounch: ''
-  });
   const [type4Result, setType4Result] = useState(null);
+
+  // Ad Timer Logic
+  React.useEffect(() => {
+    let timer;
+    if (showAdOverlay && adCountdown > 0) {
+      timer = setInterval(() => {
+        setAdCountdown((prev) => prev - 1);
+      }, 1000);
+    } else if (showAdOverlay && adCountdown === 0) {
+      // Timer finished, run the calculation and close overlay
+      if (pendingCalc) {
+        pendingCalc();
+        setPendingCalc(null);
+      }
+      setShowAdOverlay(false);
+      setAdCountdown(5); // Reset for next time
+    }
+    return () => clearInterval(timer);
+  }, [showAdOverlay, adCountdown, pendingCalc]);
+
+  const triggerWithAd = (calcFn) => {
+    setPendingCalc(() => calcFn);
+    setShowAdOverlay(true);
+    setAdCountdown(5);
+  };
 
   // Calculate Fine for Type 4
   const calculateType4Fine = () => {
@@ -439,6 +463,9 @@ const MetalCalculator = () => {
 
   return (
     <RegularDashboard>
+      {/* Ad Overlay */}
+      {showAdOverlay && <AdOverlay countdown={adCountdown} />}
+
       {/* Hero Section */}
       <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
         <h1 className="text-xl md:text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
@@ -619,7 +646,7 @@ const MetalCalculator = () => {
               </div>
 
               <button
-                onClick={calculateType1}
+                onClick={() => triggerWithAd(calculateType1)}
                 className="w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 font-semibold"
               >
                 Calculate Type 1
@@ -738,7 +765,7 @@ const MetalCalculator = () => {
             </div>
 
             <button
-              onClick={calculateType2}
+              onClick={() => triggerWithAd(calculateType2)}
               className="px-6 py-2 bg-purple-900 text-white rounded-lg hover:bg-purple-800 transition-colors"
             >
               Calculate
@@ -835,7 +862,7 @@ const MetalCalculator = () => {
               </div>
             </div>
             <button
-              onClick={calculateType3}
+              onClick={() => triggerWithAd(calculateType3)}
               className="px-6 py-2 bg-purple-900 text-white rounded-lg hover:bg-purple-800 transition-colors"
             >
               Calculate
@@ -943,7 +970,7 @@ const MetalCalculator = () => {
               </div>
 
               <button
-                onClick={calculateType4}
+                onClick={() => triggerWithAd(calculateType4)}
                 className="w-full px-4 py-3 bg-gradient-to-r from-pink-600 to-pink-700 text-white rounded-lg hover:from-pink-700 hover:to-pink-800 font-semibold"
               >
                 Calculate Type 4
@@ -1012,6 +1039,72 @@ const MetalCalculator = () => {
 
       </div>
     </RegularDashboard>
+  );
+};
+
+// Ad Overlay Component
+const AdOverlay = ({ countdown }) => {
+  return (
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-md transition-opacity duration-300">
+      <div className="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl text-center relative overflow-hidden">
+        {/* Animated Background Pulse */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 -z-10 animate-pulse"></div>
+
+        <h3 className="text-2xl font-bold text-gray-800 mb-2">Processing Calculation...</h3>
+        <p className="text-gray-600 mb-8">Please wait while we secure your math results.</p>
+
+        {/* Countdown Circle */}
+        <div className="relative w-24 h-24 mx-auto mb-8">
+          <svg className="w-full h-full transform -rotate-90">
+            <circle
+              cx="48"
+              cy="48"
+              r="40"
+              stroke="currentColor"
+              strokeWidth="8"
+              fill="transparent"
+              className="text-gray-200"
+            />
+            <circle
+              cx="48"
+              cy="48"
+              r="40"
+              stroke="currentColor"
+              strokeWidth="8"
+              fill="transparent"
+              strokeDasharray="251.2"
+              strokeDashoffset={251.2 * (countdown / 5)}
+              className="text-indigo-600 transition-all duration-1000 ease-linear"
+            />
+          </svg>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-4xl font-extrabold text-indigo-700">{Math.ceil(countdown)}</span>
+          </div>
+        </div>
+
+        {/* AdSense Placeholder Area */}
+        <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-4 min-h-[250px] flex flex-col items-center justify-center mb-4">
+          <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Advertisement</div>
+
+          {/* Real AdSense Code Area */}
+          <ins className="adsbygoogle"
+            style={{ display: 'block', minWidth: '250px', minHeight: '200px' }}
+            data-ad-client="ca-pub-7859878761721621"
+            data-ad-slot="responsive"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+
+          <p className="text-xs text-gray-400 mt-4 italic">The calculation results will appear automatically.</p>
+        </div>
+
+        <div className="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+          <div
+            className="bg-indigo-600 h-full transition-all duration-100 ease-linear"
+            style={{ width: `${(1 - countdown / 5) * 100}%` }}
+          ></div>
+        </div>
+      </div>
+    </div>
   );
 };
 
