@@ -42,6 +42,13 @@ const MetalCalculator = () => {
 
   const [type4Result, setType4Result] = useState(null);
 
+  // Type 4 State - Dakh Mel 37
+  const [type4Data, setType4Data] = useState({
+    name: '',
+    silverWeight: '',
+    tounch: ''
+  });
+
   // Ad Timer Logic
   React.useEffect(() => {
     let timer;
