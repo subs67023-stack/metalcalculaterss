@@ -1096,7 +1096,7 @@ const AdOverlay = ({ countdown }) => {
           {/* Real AdSense Code Area */}
           <ins className="adsbygoogle"
             style={{ display: 'block', minWidth: '250px', minHeight: '200px' }}
-            data-ad-client="ca-pub-7859878761721621"
+            data-ad-client="ca-pub-7859878761724621"
             data-ad-slot="responsive"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
