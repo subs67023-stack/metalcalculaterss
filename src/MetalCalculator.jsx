@@ -1097,7 +1097,7 @@ const AdOverlay = ({ countdown }) => {
           <ins className="adsbygoogle"
             style={{ display: 'block', minWidth: '250px', minHeight: '200px' }}
             data-ad-client="ca-pub-7859878761724621"
-            data-ad-slot="responsive"
+            data-ad-slot="3932591555"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
 

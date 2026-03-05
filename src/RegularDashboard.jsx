@@ -40,7 +40,7 @@ const RegularDashboard = ({ children }) => {
                         data-ad-layout="in-article"
                         data-ad-format="fluid"
                         data-ad-client="ca-pub-7859878761724621"
-                        data-ad-slot="horizontal-banner"></ins>
+                        data-ad-slot="3932591555"></ins>
                 </div>
             </div>
 
