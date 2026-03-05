@@ -706,7 +706,7 @@ const MetalCalculator = () => {
                   )}
 
                   <button
-                    onClick={downloadPDFType1}
+                    onClick={() => triggerWithAd(downloadPDFType1)}
                     className="mt-4 w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                   >
                     📄 Download PDF
@@ -812,7 +812,7 @@ const MetalCalculator = () => {
                 </div>
 
                 <button
-                  onClick={downloadPDFType2}
+                  onClick={() => triggerWithAd(downloadPDFType2)}
                   className="ml-4 px-6 py-2 mt-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                   Download PDF
                 </button>
@@ -908,7 +908,7 @@ const MetalCalculator = () => {
                   </div>
                 </div>
                 <button
-                  onClick={downloadPDFType3}
+                  onClick={() => triggerWithAd(downloadPDFType3)}
                   className="ml-4 px-6 py-2 mt-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                   Download PDF
                 </button>
@@ -1033,7 +1033,7 @@ const MetalCalculator = () => {
                   </div>
 
                   <button
-                    onClick={downloadPDFType4}
+                    onClick={() => triggerWithAd(downloadPDFType4)}
                     className="mt-4 w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                   >
                     📄 Download PDF

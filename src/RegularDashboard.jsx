@@ -27,6 +27,20 @@ const RegularDashboard = ({ children }) => {
                     </nav>
                 </div>
             </header>
+
+            {/* Top Horizontal Ad Banner */}
+            <div className="container mx-auto px-4 mt-6 -mb-2">
+                <div className="bg-gray-100/50 border-2 border-dashed border-gray-200 rounded-xl p-4 min-h-[100px] flex flex-col items-center justify-center">
+                    <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Advertisement</div>
+                    <ins className="adsbygoogle"
+                        style={{ display: 'block', textAlign: 'center' }}
+                        data-ad-layout="in-article"
+                        data-ad-format="fluid"
+                        data-ad-client="ca-pub-7859878761724621"
+                        data-ad-slot="3932591555"></ins>
+                </div>
+            </div>
+
             <main className="flex-grow container mx-auto p-4 md:p-6">
                 {children}
             </main>
