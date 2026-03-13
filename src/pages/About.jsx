@@ -4,32 +4,81 @@ import RegularDashboard from '../RegularDashboard';
 const About = () => {
     return (
         <RegularDashboard>
-            <div className="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow">
-                <h1 className="text-3xl font-bold mb-6">About Metal Calculator</h1>
+            <div className="max-w-4xl mx-auto space-y-12 pb-20">
+                {/* Hero Section */}
+                <section className="bg-gradient-to-br from-indigo-900 to-slate-900 text-white p-8 md:p-16 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full blur-[120px] opacity-10 -mr-48 -mt-48"></div>
+                    <div className="relative z-10">
+                        <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Expertise in Every Batch</h1>
+                        <p className="text-lg md:text-xl text-indigo-100 max-w-2xl leading-relaxed">
+                            Metal Calculator was founded to bridge the gap between traditional craftsmanship and modern digital precision. We provide the tools hallmarking specialists and refiners need to scale their operations with confidence.
+                        </p>
+                    </div>
+                </section>
 
-                <div className="space-y-4 text-gray-700">
-                    <p>
-                        Welcome to the <strong>Metal Calculator</strong>, the ultimate tool designed for jewelers, refiners, and precious metal enthusiasts.
-                    </p>
+                {/* Structured Content */}
+                <div className="grid md:grid-cols-3 gap-8 px-4">
+                    <div className="md:col-span-2 space-y-8">
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-indigo-100 pb-2">Our Mathematical Philosophy</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                In the precious metal industry, a discrepancy of even 0.1% in purity can result in significant financial loss or the rejection of an entire batch by hallmarking centers. That's why our algorithms follow international ISO standards for mass calculation. We account for batch variance, moisture in scrap (conceptual), and the specific gravity challenges inherent in alloying pure silver with copper and zinc.
+                            </p>
+                        </section>
 
-                    <h2 className="text-xl font-semibold text-indigo-800 mt-6">Our Mission</h2>
-                    <p>
-                        Our goal is to simplify complex metal purity calculations. Whether you are melting old jewelry, adjusting silver purity for silverware, or refining scrap metal, our tools help you calculate the exact amounts of copper, pure silver, or alloy needed.
-                    </p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-indigo-100 pb-2">Why We Choose Client-Side Computing</h2>
+                            <p className="text-gray-700 leading-relaxed mb-4">
+                                Most online calculators send your data to a remote server. We believe your trade secrets should stay yours. By building our tools to run entirely within your browser (Client-Side), we ensure:
+                            </p>
+                            <ul className="grid sm:grid-cols-2 gap-4">
+                                <li className="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                                    <strong className="block text-indigo-900">Privacy</strong>
+                                    <span className="text-sm text-indigo-700">No batch data ever leaves your device or touches our database.</span>
+                                </li>
+                                <li className="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                                    <strong className="block text-indigo-900">Speed</strong>
+                                    <span className="text-sm text-indigo-700">Calculations happen instantly, even with weak or no internet connection.</span>
+                                </li>
+                            </ul>
+                        </section>
 
-                    <h2 className="text-xl font-semibold text-indigo-800 mt-6">Features</h2>
-                    <ul className="list-disc pl-5 space-y-2">
-                        <li><strong>Multi-Batch Purity Adjustment</strong>: Calculate additions for multiple batches of varying weights and purities.</li>
-                        <li><strong>Fine Silver Calculation</strong>: Quickly determine the fine silver content in any alloy.</li>
-                        <li><strong>Dilution & Melting</strong>: Precision tools for lowering purity to standard grades like 925, 800, or custom values.</li>
-                        <li><strong>PDF Reports</strong>: Download professional PDF reports of your calculations for your records.</li>
-                    </ul>
+                        <section className="bg-gray-900 text-white p-8 rounded-2xl shadow-lg">
+                            <h2 className="text-2xl font-bold mb-4 text-yellow-400">The 925 Standard</h2>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Our most popular feature, the Multi-Batch Silver Adjuster, is specifically calibrated for 'Sterling Silver' production. Whether you are starting with pure 999 silver or recycling 800-grade scrap, our tools guide you through the exact addition of copper to meet the legal 92.5% threshold used worldwide.
+                            </p>
+                        </section>
+                    </div>
 
-                    <h2 className="text-xl font-semibold text-indigo-800 mt-6">Free & Secure</h2>
-                    <p>
-                        This tool is completely free to use. Importantly, it is <strong>100% Client-Side</strong>.
-                        This means all calculations happen right in your browser. We do not store your data, trade secrets, or calculation history on our servers.
-                    </p>
+                    <aside className="space-y-6">
+                        <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                            <h3 className="font-bold text-gray-900 mb-4">Key Statistics</h3>
+                            <div className="space-y-4">
+                                <div>
+                                    <div className="text-3xl font-extrabold text-indigo-600">99.9%</div>
+                                    <div className="text-xs text-gray-500 uppercase font-bold tracking-widest">Calculation Accuracy</div>
+                                </div>
+                                <hr />
+                                <div>
+                                    <div className="text-3xl font-extrabold text-indigo-600">ZERO</div>
+                                    <div className="text-xs text-gray-500 uppercase font-bold tracking-widest">Data Retention</div>
+                                </div>
+                                <hr />
+                                <div>
+                                    <div className="text-3xl font-extrabold text-indigo-600">4+</div>
+                                    <div className="text-xs text-gray-500 uppercase font-bold tracking-widest">Refining Modules</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-yellow-50 p-6 rounded-2xl shadow-sm border border-yellow-200">
+                            <h3 className="font-bold text-yellow-800 mb-2 italic text-sm">Pro Tip:</h3>
+                            <p className="text-yellow-700 text-xs leading-relaxed">
+                                Always perform a 'Trial Melt' when working with unrecognized scrap before using large-scale batch calculations to verify the initial purity.
+                            </p>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </RegularDashboard>

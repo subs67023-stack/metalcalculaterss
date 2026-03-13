@@ -22,7 +22,8 @@ const RegularDashboard = ({ children }) => {
                     <h1 className="text-xl font-bold flex items-center gap-2">
                         🧮 Metal Calculator
                     </h1>
-                    <nav className="text-sm">
+                    <nav className="text-sm flex gap-4">
+                        <Link to="/guides" className="hover:text-indigo-200">Guides</Link>
                         <Link to="/about" className="hover:text-indigo-200">About</Link>
                     </nav>
                 </div>
