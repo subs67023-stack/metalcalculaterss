@@ -24,6 +24,8 @@ const RegularDashboard = ({ children }) => {
                     </h1>
                     <nav className="text-sm flex gap-4">
                         <Link to="/guides" className="hover:text-indigo-200">Guides</Link>
+                        <Link to="/glossary" className="hover:text-indigo-200">Glossary</Link>
+                        <Link to="/hallmarking" className="hover:text-indigo-200">Standards</Link>
                         <Link to="/about" className="hover:text-indigo-200">About</Link>
                     </nav>
                 </div>
@@ -65,6 +67,8 @@ const RegularDashboard = ({ children }) => {
                         Disclaimer: This tool is for estimation purposes only. Always verify with professional assaying.
                     </p>
                     <div className="flex justify-center gap-6 text-sm flex-wrap">
+                        <Link to="/glossary" className="hover:text-white">Glossary</Link>
+                        <Link to="/hallmarking" className="hover:text-white">Hallmarking Standards</Link>
                         <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
                         <Link to="/terms" className="hover:text-white">Terms of Service</Link>
                         <Link to="/contact" className="hover:text-white">Contact Us</Link>

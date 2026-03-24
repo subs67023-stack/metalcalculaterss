@@ -2,33 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.dhbjcnd123.in/</loc>
-    <lastmod>2024-05-20</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.dhbjcnd123.in/calculator</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.dhbjcnd123.in/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.dhbjcnd123.in/guides</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dhbjcnd123.in/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.dhbjcnd123.in/guides/understanding-silver-hallmarks</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dhbjcnd123.in/contact</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.dhbjcnd123.in/guides/calculate-melting-loss</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/guides/jewelry-alloy-mixing</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/guides/history-precious-metal-refining</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/guides/gold-karat-purity</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/glossary</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/hallmarking</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.dhbjcnd123.in/about</loc>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/privacy-policy</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/terms</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dhbjcnd123.in/contact</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>

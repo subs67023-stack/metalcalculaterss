@@ -101,21 +101,29 @@ const Home = () => {
                         </Link>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
-                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <h4 className="font-bold text-indigo-600 text-sm mb-2 uppercase italic">Hallmarking</h4>
-                            <p className="text-xs text-gray-500">A guide to worldwide silver purity standards.</p>
+                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-300 transition-colors">
+                            <Link to="/hallmarking">
+                                <h4 className="font-bold text-indigo-600 text-sm mb-2 uppercase italic">Hallmarking</h4>
+                                <p className="text-xs text-gray-500">A guide to worldwide silver purity standards.</p>
+                            </Link>
                         </div>
-                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <h4 className="font-bold text-yellow-600 text-sm mb-2 uppercase italic">Alloying</h4>
-                            <p className="text-xs text-gray-500">The science of mixing copper and pure gold.</p>
+                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:border-yellow-300 transition-colors">
+                            <Link to="/glossary">
+                                <h4 className="font-bold text-yellow-600 text-sm mb-2 uppercase italic">Glossary</h4>
+                                <p className="text-xs text-gray-500">Master the terminology of the refining trade.</p>
+                            </Link>
                         </div>
-                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <h4 className="font-bold text-orange-600 text-sm mb-2 uppercase italic">Refining</h4>
-                            <p className="text-xs text-gray-500">Calculating your yield after chemical cleaning.</p>
+                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:border-orange-300 transition-colors">
+                            <Link to="/guides">
+                                <h4 className="font-bold text-orange-600 text-sm mb-2 uppercase italic">Alloying</h4>
+                                <p className="text-xs text-gray-500">The science of mixing copper and pure gold.</p>
+                            </Link>
                         </div>
-                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <h4 className="font-bold text-green-600 text-sm mb-2 uppercase italic">Loss Math</h4>
-                            <p className="text-xs text-gray-500">Accounting for burn-off in the crucible.</p>
+                        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:border-green-300 transition-colors">
+                            <Link to="/guides/calculate-melting-loss">
+                                <h4 className="font-bold text-green-600 text-sm mb-2 uppercase italic">Loss Math</h4>
+                                <p className="text-xs text-gray-500">Accounting for burn-off in the crucible.</p>
+                            </Link>
                         </div>
                     </div>
                 </div>

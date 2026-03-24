@@ -1,33 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
+import { articles } from '../data/articles';
 
 const Guides = () => {
-    const articles = [
-        {
-            title: "Understanding Silver Hallmarks: 925, 800, and Beyond",
-            content: `Silver hallmarking is a system used to denote the purity of silver in jewelry and silverware. The most common hallmark is '925', which represents Sterling Silver (92.5% pure silver and 7.5% alloy, usually copper). Other common marks include '800' (often found in European vintage silverware) and '999' (Fine Silver). Understanding these marks is crucial for both buyers and refiners to ensure they are dealing with genuine precious metals.`,
-            tag: "Basics"
-        },
-        {
-            title: "How to Calculate Melting Loss in Refining",
-            content: `When melting precious metals, a small percentage of the material is inevitably lost due to oxidation, vaporization, or entrapment in the crucible flux. This is known as 'burn loss' or 'melting loss'. For clean scrap, loss is typically between 0.1% and 0.3%. For dirty or industrial scrap, it can be higher. Professional refiners always account for this loss by 'over-shooting' their target purity slightly during the alloying stage.`,
-            tag: "Advanced"
-        },
-        {
-            title: "Tips for Professional Jewelry Alloy Mixing",
-            content: `Creating a perfect gold or silver alloy requires more than just mixing metals. The order of melting matters: always melt the higher melting point metal first (like gold or silver) before adding lower melting point alloys like copper or zinc (Jast). Using a high-quality graphite crucible and a nitrogen-rich or reducing atmosphere can help minimize oxidation and ensure a homogeneous mix for better hallmarking results.`,
-            tag: "Pro Tips"
-        },
-        {
-            title: "The History of Precious Metal Refining",
-            content: `Refining precious metals is one of the oldest chemical processes known to man, dating back to ancient civilizations like the Lydians and Egyptians. Early methods involved cupellation—heating ore in a shallow porous cup until impurities were oxidized and absorbed, leaving pure gold or silver behind. Today, electrolytic refining and aqua regia processes allow for purities up to 99.999%, driving modern technology in electronics and medicine.`,
-            tag: "History"
-        }
-    ];
-
     return (
         <RegularDashboard>
-            <div className="max-w-5xl mx-auto px-4 py-8">
+            <div className="max-w-5xl mx-auto px-4 py-12">
                 <header className="mb-12 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                         Refining <span className="text-indigo-600">Knowledge Base</span>
@@ -37,48 +16,70 @@ const Guides = () => {
                     </p>
                 </header>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-8 mb-16">
                     {articles.map((article, index) => (
-                        <article key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
-                            <div className="p-8">
-                                <span className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-4">
-                                    {article.tag}
-                                </span>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4 hover:text-indigo-600 cursor-default">
-                                    {article.title}
-                                </h2>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {article.content}
-                                </p>
-                                <div className="mt-8 flex items-center text-sm font-semibold text-indigo-600">
-                                    Educational Resource • {article.content.split(' ').length} words
+                        <Link key={index} to={`/guides/${article.id}`} className="block group">
+                            <article className="bg-white h-full rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:-translate-y-1">
+                                <div className="p-8">
+                                    <span className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-4 border border-indigo-200">
+                                        {article.tag}
+                                    </span>
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                                        {article.title}
+                                    </h2>
+                                    <p className="text-gray-600 leading-relaxed line-clamp-3">
+                                        {article.content.split('\n\n')[0]}
+                                    </p>
+                                    <div className="mt-8 flex items-center justify-between">
+                                        <div className="flex items-center text-sm font-semibold text-indigo-600">
+                                            Read More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                        </div>
+                                        <div className="text-xs text-gray-400">
+                                            {article.date}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </Link>
                     ))}
                 </div>
 
-                <section className="mt-20 bg-indigo-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl opacity-10 -mr-32 -mt-32"></div>
+                <section className="bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 rounded-3xl p-8 md:p-16 text-white relative overflow-hidden shadow-2xl">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full blur-[120px] opacity-10 -mr-48 -mt-48"></div>
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full blur-[100px] opacity-10 -ml-32 -mb-32"></div>
+
                     <div className="relative z-10">
-                        <h2 className="text-3xl font-bold mb-4 text-yellow-400">Standard Purity References</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                            <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                                <div className="text-2xl font-bold">925</div>
-                                <div className="text-xs text-indigo-200">Sterling Silver</div>
+                        <h2 className="text-3xl font-bold mb-8 text-yellow-400 flex items-center gap-3">
+                            <span className="text-4xl text-white">📊</span> Standard Purity Reference Table
+                        </h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors">
+                                <div className="text-3xl font-bold mb-1">925</div>
+                                <div className="text-xs text-indigo-300 uppercase font-bold tracking-widest">Sterling</div>
                             </div>
-                            <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                                <div className="text-2xl font-bold">750</div>
-                                <div className="text-xs text-indigo-200">18K Gold</div>
+                            <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors">
+                                <div className="text-3xl font-bold mb-1">750</div>
+                                <div className="text-xs text-indigo-300 uppercase font-bold tracking-widest">18K Gold</div>
                             </div>
-                            <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                                <div className="text-2xl font-bold">585</div>
-                                <div className="text-xs text-indigo-200">14K Gold</div>
+                            <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors">
+                                <div className="text-3xl font-bold mb-1">585</div>
+                                <div className="text-xs text-indigo-300 uppercase font-bold tracking-widest">14K Gold</div>
                             </div>
-                            <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                                <div className="text-2xl font-bold">800</div>
-                                <div className="text-xs text-indigo-200">Coin Silver</div>
+                            <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors">
+                                <div className="text-3xl font-bold mb-1">800</div>
+                                <div className="text-xs text-indigo-300 uppercase font-bold tracking-widest">Coin Silver</div>
                             </div>
+                        </div>
+
+                        <div className="mt-12 flex flex-col md:flex-row gap-6 items-center justify-between border-t border-white/10 pt-8">
+                            <p className="text-indigo-200 text-sm max-w-md">
+                                Need more detailed legal requirements? Check our international hallmarking guide for country-specific data.
+                            </p>
+                            <Link to="/hallmarking">
+                                <button className="px-8 py-3 bg-yellow-500 text-gray-900 font-extrabold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg">
+                                    View Hallmarking Table
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </section>

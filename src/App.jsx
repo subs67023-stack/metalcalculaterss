@@ -7,6 +7,9 @@ import Terms from './pages/Terms';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Guides from './pages/Guides';
+import Glossary from './pages/Glossary';
+import Hallmarking from './pages/Hallmarking';
+import ArticleDetail from './pages/ArticleDetail';
 
 function App() {
     return (
@@ -15,6 +18,9 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/calculator" element={<MetalCalculator />} />
                 <Route path="/guides" element={<Guides />} />
+                <Route path="/guides/:id" element={<ArticleDetail />} />
+                <Route path="/glossary" element={<Glossary />} />
+                <Route path="/hallmarking" element={<Hallmarking />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/contact" element={<Contact />} />
