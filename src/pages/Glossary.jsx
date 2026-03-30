@@ -4,64 +4,200 @@ import RegularDashboard from '../RegularDashboard';
 const Glossary = () => {
     const terms = [
         {
-            term: "Alloy",
-            definition: "A metal made by combining two or more metallic elements, especially to give greater strength or resistance to corrosion. In jewelry, pure gold or silver is often alloyed with copper, zinc, or nickel."
+            term: "916 Gold",
+            definition: "The Indian standard for 22 Karat gold jewelry, representing 91.6% pure gold. It is the most common purity for traditional Indian jewelry and is internationally recognized."
         },
         {
-            term: "Assay",
-            definition: "A test conducted to determine the content and quality of a precious metal. An assay confirms whether a piece of jewelry meets the required purity standards (e.g., 925 for sterling silver)."
+            term: "999 Fine Silver",
+            definition: "Silver that is 99.9% pure. In the Indian market, it is often referred to as 'Chandi' or 'Fine'. It is the base material for creating alloys like 925 Sterling or 800-grade silverware."
+        },
+        {
+            term: "Acid Testing",
+            definition: "A traditional method of testing gold purity using Nitric Acid on a touchstone (Kasauti). Different concentrations of acid react with different purity levels (e.g., 18K, 22K) to provide an estimate."
+        },
+        {
+            term: "Alloy",
+            definition: "A metal made by combining two or more metallic elements. In India, pure gold is often alloyed with copper and silver to create 22K or 18K jewelry for better durability."
+        },
+        {
+            term: "Aqua Regia",
+            definition: "A highly corrosive mixture of nitric and hydrochloric acid. It is the only acid that can dissolve gold and is used extensively in professional refining to achieve 99.99% purity."
+        },
+        {
+            term: "Assay Office",
+            definition: "A laboratory or institution (like a BIS Recognition Hallmarking Centre) that tests the purity of precious metals and applies a hallmark."
+        },
+        {
+            term: "BIS (Bureau of Indian Standards)",
+            definition: "The national standards body of India that regulates gold and silver hallmarking. The BIS logo on jewelry is a guarantee of purity for the consumer."
+        },
+        {
+            term: "Borax (Suhaga)",
+            definition: "A flux used in soldering and melting. In Indian workshops, it is known as 'Suhaga' and is essential for preventing oxidation and helping the metal flow cleanly."
         },
         {
             term: "Bullion",
-            definition: "Gold or silver in bulk before coining, or valued by weight. It is typically found in the form of bars, ingots, or specialized coins."
+            definition: "Gold or silver in bulk form (bars or ingots). Bullion is valued based on its weight and purity rather than its artistic design."
+        },
+        {
+            term: "Burn Loss",
+            definition: "The small amount of metal lost during the melting process due to oxidation or vaporization. Professional calculators help refiners account for this loss in their final math."
+        },
+        {
+            term: "Cadmium (KDM)",
+            definition: "A metal previously used as a soldering agent in India (KDM jewelry). It is now banned due to health risks and has been replaced by zinc-based or gold-based solders."
+        },
+        {
+            term: "Carat (Weight)",
+            definition: "A unit of weight for gemstones (1 carat = 0.2 grams). Not to be confused with 'Karat', which measures gold purity."
+        },
+        {
+            term: "Chandi",
+            definition: "The Hindi/Marathi word for Silver. In the trade, it usually refers to 999 Fine Silver bars or grains."
+        },
+        {
+            term: "Copper (Tamba)",
+            definition: "The most common alloying element for gold and silver. It provides hardness and a reddish tint to the metal."
+        },
+        {
+            term: "Crucible (Moos)",
+            definition: "A ceramic or graphite container used for melting metals at high temperatures. In Indian workshops, it is often called a 'Moos'."
         },
         {
             term: "Cupellation",
-            definition: "A traditional refining process where ores or alloyed metals are treated under high temperatures in a porous cup (cupel) to separate precious metals like gold and silver from base metals like lead and copper."
+            definition: "A chemical refining process where lead is used to absorb base metal impurities from gold or silver, leaving a pure bead of precious metal behind."
+        },
+        {
+            term: "Dak (Solder)",
+            definition: "The Indian trade term for solder—a lower-melting-point alloy used to join two pieces of metal together."
         },
         {
             term: "Ductility",
-            definition: "The physical property of a metal that allows it to be drawn out into a thin wire without breaking. Gold is the most ductile of all metals."
+            definition: "The property that allows gold to be drawn into extremely thin wires. One gram of gold can be drawn into a wire kilometers long."
         },
         {
-            term: "Fine Silver",
-            definition: "Silver that is 99.9% pure. While it is highly resistant to tarnish, it is generally too soft for functional jewelry, which is why it is often alloyed to 92.5% (Sterling)."
+            term: "Fine Weight",
+            definition: "The weight of the pure metal content within an alloyed piece. For example, 10g of 22K (91.6%) gold has a fine weight of 9.16g."
+        },
+        {
+            term: "Fine Gold",
+            definition: "24 Karat gold, which is 99.9% or 99.99% pure. It is the raw material used for all jewelry manufacturing."
         },
         {
             term: "Flux",
-            definition: "A chemical cleaning agent used in soldering and smelting. It prevents oxidation of the metal surface and helps the solder flow or impurities separate during melting."
+            definition: "A substance like Borax used to clean the metal surface and prevent oxidation during melting and soldering."
+        },
+        {
+            term: "Gross Weight",
+            definition: "The total weight of a jewelry piece, including any stones, enamel, or wax (Lakh) inside."
         },
         {
             term: "Hallmark",
-            definition: "An official mark or series of marks struck on items made of precious metals, certifying their purity and sometimes their origin and date of manufacture."
+            definition: "An official mark on jewelry certifying its purity. In India, a valid hallmark includes the BIS logo, Purity (e.g., 22K916), and a 6-digit HUID code."
+        },
+        {
+            term: "HUID (Hallmark Unique ID)",
+            definition: "A 6-digit alphanumeric code assigned to every piece of hallmarked jewelry in India. It allows consumers to verify the piece through the BIS Care App."
+        },
+        {
+            term: "Impurity",
+            definition: "Base metals (like iron, lead, or tin) present in a precious metal batch that must be removed through refining to achieve high purity."
+        },
+        {
+            term: "Ingot (Lagdi)",
+            definition: "A block of metal cast into a specific shape for storage or further processing. Often called 'Lagdi' in the Indian market."
+        },
+        {
+            term: "Jast (Zinc)",
+            definition: "An alloying element used to create solders (Dak) or to improve the fluidity of casting grain."
+        },
+        {
+            term: "Karigar",
+            definition: "An Indian term for a skilled goldsmith or artisan who manufactures jewelry by hand."
         },
         {
             term: "Karat (K)",
-            definition: "A measurement of the purity of gold. 24K is pure gold, while 18K is 75% gold and 25% alloy."
+            definition: "The unit used to measure the purity of gold. 24K is 100%, 22K is 91.6%, and 18K is 75%."
+        },
+        {
+            term: "Karatmeter",
+            definition: "A popular name for XRF (X-Ray Fluorescence) machines used in Indian jewelry shops to instantly test purity without damaging the piece."
+        },
+        {
+            term: "Kasauti (Touchstone)",
+            definition: "A black stone used for the traditional acid test. The color of the streak left by the gold on the stone helps determine its purity."
         },
         {
             term: "Malleability",
-            definition: "The ability of a metal to be hammered or rolled into thin sheets. Gold is the most malleable metal, capable of being beaten into 'gold leaf' so thin it is semi-transparent."
+            definition: "The ability of a metal (like gold) to be hammered into extremely thin sheets or foil."
+        },
+        {
+            term: "Melting Loss",
+            definition: "The difference between the starting weight of the scrap and the final weight of the melted ingot. Common losses range from 0.1% to 2% depending on the scrap quality."
+        },
+        {
+            term: "Millesimal Fineness",
+            definition: "A system of expressing purity in parts per 1000. For example, 916 means 916 parts gold and 84 parts alloy."
+        },
+        {
+            term: "Net Weight",
+            definition: "The weight of the precious metal alone, after subtracting the weight of any stones, beads, or lacquer."
+        },
+        {
+            term: "Nitric Acid",
+            definition: "A powerful acid used in the 'Parting' process to dissolve silver and base metals, leaving pure gold behind."
         },
         {
             term: "Oxidation",
-            definition: "A chemical reaction that occurs when a metal is exposed to oxygen, often leading to tarnish or 'firestain' on the surface of silver and copper alloys."
+            definition: "The reaction between oxygen and base metals in an alloy, causing the metal to turn black or develop a 'skin' during heating."
         },
         {
-            term: "Specific Gravity",
-            definition: "The ratio of the density of a substance to the density of a standard, usually water. It is a non-destructive way to estimate the purity of a precious metal object."
+            term: "Patta",
+            definition: "A flat strip or sheet of silver or gold used as raw material for further manufacturing."
+        },
+        {
+            term: "Purity Adjustment",
+            definition: "The process of adding pure metal or alloy to a batch to reach a specific target purity (e.g., converting 20K scrap to 22K)."
+        },
+        {
+            term: "Recovery",
+            definition: "The amount of pure precious metal successfully extracted from a refining process compared to the theoretical fine weight."
+        },
+        {
+            term: "Scrap Gold",
+            definition: "Old or broken jewelry, industrial waste, or dental gold that is destined to be melted and refined."
+        },
+        {
+            term: "Sona",
+            definition: "The Hindi/Marathi word for Gold. Usually implies 24K purity in a trading context."
+        },
+        {
+            term: "Standard Gold",
+            definition: "In India, this often refers to 995 purity gold bars (99.5% pure), which is the standard for investment and trading."
         },
         {
             term: "Sterling Silver",
-            definition: "An alloy of silver containing 92.5% by weight of silver and 7.5% by weight of other metals, usually copper. The sterling silver standard has a minimum millesimal fineness of 925."
+            definition: "The international standard for silver jewelry, containing 92.5% silver and 7.5% copper. Marked as '925'."
+        },
+        {
+            term: "Tamba",
+            definition: "The Hindi/Marathi word for Copper. It is the primary alloy used to give gold its strength and characteristic color."
         },
         {
             term: "Troy Ounce",
-            definition: "The standard unit of weight for precious metals. One troy ounce is equivalent to approximately 31.103 grams, which is heavier than a standard avoirdupois ounce (28.35g)."
+            definition: "The international unit for precious metal weight (1 Troy Oz = 31.103 grams). Note that India primarily uses Grams and Tolas."
         },
         {
-            term: "Zinc (Jast)",
-            definition: "A base metal often used in jewelry alloys to improve fluidity during casting and to act as an oxygen scavenger, reducing the risk of porosity."
+            term: "Tunch",
+            definition: "A common Indian trade term for purity percentage. If a sample is '92 Tunch', it means it is 92% pure."
+        },
+        {
+            term: "XRF Testing",
+            definition: "X-Ray Fluorescence testing. A non-destructive scientific method to determine the exact elemental composition of a metal sample."
+        },
+        {
+            term: "Zinc",
+            definition: "A white metal used in small quantities in gold and silver alloys to improve casting results and lower the melting point of solders."
         }
     ];
 
