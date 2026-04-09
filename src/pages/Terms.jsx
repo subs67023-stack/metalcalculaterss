@@ -1,9 +1,14 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 
 const Terms = () => {
     return (
         <RegularDashboard>
+            <SEO 
+                title="Terms of Service - Metal Calculator"
+                description="Read our terms of service. Our tools are for estimation purposes to assist the jewelry and refining trade."
+            />
             <div className="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow">
                 <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
 

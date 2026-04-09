@@ -1,9 +1,14 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 
 const About = () => {
     return (
         <RegularDashboard>
+            <SEO 
+                title="About Us - Supporting the Indian Jewelry Community"
+                description="Our mission is to bring transparency and mathematical precision to silver and gold refining across India. 100% free tool for jewelers."
+            />
             <div className="max-w-4xl mx-auto space-y-12 pb-20">
                 {/* Personal Mission Header */}
                 <div className="text-center space-y-4">

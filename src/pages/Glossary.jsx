@@ -1,5 +1,6 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 
 const Glossary = () => {
     const terms = [
@@ -203,6 +204,10 @@ const Glossary = () => {
 
     return (
         <RegularDashboard>
+            <SEO 
+                title="Gold & Silver Refining Glossary - Technical Industry Terms"
+                description="Comprehensive dictionary of jewelry refining terms, including BIS standards, hallmarking terminology, and chemical refining definitions for the Indian market."
+            />
             <div className="max-w-4xl mx-auto px-4 py-12">
                 <header className="mb-12 border-b-4 border-indigo-600 pb-6">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Refining & Jewelry <span className="text-indigo-600">Glossary</span></h1>

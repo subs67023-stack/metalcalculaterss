@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 import { articles } from '../data/articles';
 
 const Guides = () => {
     return (
         <RegularDashboard>
+            <SEO 
+                title="Jewelry Refining Guides & Learning Center"
+                description="Expert guides on silver and gold refining, hallmarking standards, and alloy mixing. Master the craft of precious metal chemistry with our professional resources."
+            />
             <div className="max-w-5xl mx-auto px-4 py-12">
                 <header className="mb-12 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">

@@ -3,6 +3,7 @@ import RegularDashboard from './RegularDashboard';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import autoTable from 'jspdf-autotable';
+import SEO from './components/SEO';
 
 
 const MetalCalculator = () => {
@@ -442,6 +443,10 @@ const MetalCalculator = () => {
 
   return (
     <RegularDashboard>
+      <SEO 
+        title="Professional Metal Calculator - Purity & Alloying Dashboard"
+        description="Calculate metal purity, Tunch adjustments, and multi-batch refining ratios with precision. The ultimate tool for Indian jewelry manufacturers."
+      />
 
       {/* Hero Section */}
       <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">

@@ -1,9 +1,14 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => {
     return (
         <RegularDashboard>
+            <SEO 
+                title="Privacy Policy - Metal Calculator"
+                description="Our privacy policy details how we handle your data. We respect your privacy and do not store your professional refining calculations."
+            />
             <div className="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow">
                 <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
                 <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>

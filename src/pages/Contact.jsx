@@ -1,9 +1,14 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     return (
         <RegularDashboard>
+            <SEO 
+                title="Contact Us - Metal Calculator Support"
+                description="Get in touch with the Metal Calculator team. We value your feedback on our gold and silver refining tools."
+            />
             <div className="max-w-4xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow">
                 <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
 

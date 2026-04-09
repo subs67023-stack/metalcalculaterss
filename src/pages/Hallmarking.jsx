@@ -1,5 +1,6 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 
 const Hallmarking = () => {
     const standards = [
@@ -12,6 +13,10 @@ const Hallmarking = () => {
 
     return (
         <RegularDashboard>
+            <SEO 
+                title="International Hallmarking Standards - Pure Gold & Silver Purity Table"
+                description="Global guide to precious metal purity standards. Compare BIS, UK, USA, and EU hallmarking requirements for gold and silver alloys."
+            />
             <div className="max-w-5xl mx-auto px-4 py-12">
                 <header className="mb-12 border-b-4 border-yellow-500 pb-6">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">International <span className="text-yellow-600">Hallmarking Standards</span></h1>

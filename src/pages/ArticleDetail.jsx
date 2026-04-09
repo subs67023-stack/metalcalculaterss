@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
+import SEO from '../components/SEO';
 import { articles } from '../data/articles';
 
 const ArticleDetail = () => {
@@ -20,6 +21,11 @@ const ArticleDetail = () => {
 
     return (
         <RegularDashboard>
+            <SEO 
+                title={`${article.title} - Metal Calculator Guides`}
+                description={article.content.substring(0, 160).replace(/#/g, '') + '...'}
+                keywords={`${article.tag}, jewelry refining, ${article.title.toLowerCase()}`}
+            />
             <div className="max-w-4xl mx-auto px-4 py-8">
                 <Link to="/guides" className="text-indigo-600 hover:text-indigo-800 flex items-center gap-2 mb-8 font-semibold">
                     ← Back to Knowledge Base

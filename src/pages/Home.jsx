@@ -2,10 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
 import SEOContent from '../components/SEOContent';
+import SEO from '../components/SEO';
 
 const Home = () => {
     return (
         <RegularDashboard>
+            <SEO 
+                title="Metal Calculator - Professional Gold & Silver Purity Tools"
+                description="The industrial standard for purity adjustment, alloying, and melting calculations. Trusted by Indian jewelers and refiners for Tunch and Mel math."
+            />
             {/* Hero Section */}
             <div className="text-center bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900 text-white py-20 px-4 rounded-xl shadow-2xl relative overflow-hidden mb-12">
                 {/* Decorative Metallic Circles */}
