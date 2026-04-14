@@ -25,6 +25,9 @@ const ArticleDetail = () => {
                 title={`${article.title} - Metal Calculator Guides`}
                 description={article.content.substring(0, 160).replace(/#/g, '') + '...'}
                 keywords={`${article.tag}, jewelry refining, ${article.title.toLowerCase()}`}
+                type="Article"
+                datePublished={article.date}
+                dateModified="2026-04-14"
             />
             <div className="max-w-4xl mx-auto px-4 py-8">
                 <Link to="/guides" className="text-indigo-600 hover:text-indigo-800 flex items-center gap-2 mb-8 font-semibold">

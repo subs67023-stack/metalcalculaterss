@@ -67,8 +67,12 @@ const RegularDashboard = ({ children }) => {
                         Disclaimer: This tool is for estimation purposes only. Always verify with professional assaying.
                     </p>
                     <div className="flex justify-center gap-6 text-sm flex-wrap">
+                        <Link to="/" className="hover:text-white">Home</Link>
+                        <Link to="/calculator" className="hover:text-white">Calculator</Link>
+                        <Link to="/guides" className="hover:text-white">Guides</Link>
                         <Link to="/glossary" className="hover:text-white">Glossary</Link>
                         <Link to="/hallmarking" className="hover:text-white">Hallmarking Standards</Link>
+                        <Link to="/about" className="hover:text-white">About Us</Link>
                         <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
                         <Link to="/terms" className="hover:text-white">Terms of Service</Link>
                         <Link to="/contact" className="hover:text-white">Contact Us</Link>
