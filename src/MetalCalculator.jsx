@@ -4,6 +4,7 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import autoTable from 'jspdf-autotable';
 import SEO from './components/SEO';
+import AdsterraAd from './components/AdsterraAd';
 
 
 const MetalCalculator = () => {
@@ -639,13 +640,14 @@ const MetalCalculator = () => {
                   <h4 className="font-bold text-lg mb-4 text-indigo-800">📊 Results:</h4>
 
                   {/* Non-intrusive Ad in results */}
-                  <div className="mb-6 bg-white/50 p-2 rounded border border-indigo-100">
+                  <div className="mb-6 bg-white/50 p-2 rounded border border-indigo-100 flex flex-col items-center justify-center gap-4">
                     <ins className="adsbygoogle"
                       style={{ display: 'block' }}
                       data-ad-client="ca-pub-7859878761724621"
                       data-ad-slot="3932591555"
                       data-ad-format="auto"
                       data-full-width-responsive="true"></ins>
+                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
                   </div>
 
                   <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-orange-500">
@@ -796,6 +798,10 @@ const MetalCalculator = () => {
                   </div>
                 </div>
 
+                <div className="flex justify-center my-4">
+                  <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                </div>
+
                 <button
                   onClick={downloadPDFType2}
                   className="ml-4 px-6 py-2 mt-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
@@ -892,6 +898,10 @@ const MetalCalculator = () => {
                     <span className="block font-medium text-orange-700 mt-1">50% of added mass</span>
                   </div>
                 </div>
+                <div className="flex justify-center my-4">
+                  <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                </div>
+
                 <button
                   onClick={downloadPDFType3}
                   className="ml-4 px-6 py-2 mt-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
@@ -973,13 +983,14 @@ const MetalCalculator = () => {
                   <h4 className="font-bold text-lg mb-4 text-pink-800">📊 Results:</h4>
 
                   {/* Non-intrusive Ad in results */}
-                  <div className="mb-6 bg-white/50 p-2 rounded border border-pink-100">
+                  <div className="mb-6 bg-white/50 p-2 rounded border border-pink-100 flex flex-col items-center justify-center gap-4">
                     <ins className="adsbygoogle"
                       style={{ display: 'block' }}
                       data-ad-client="ca-pub-7859878761724621"
                       data-ad-slot="3932591555"
                       data-ad-format="auto"
                       data-full-width-responsive="true"></ins>
+                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
                   </div>
 
                   {/* Step 1: Adjust to 52% */}

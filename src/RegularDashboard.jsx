@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CookieBanner from './components/CookieBanner';
 import VisitorCounter from './components/VisitorCounter';
+import AdsterraAd from './components/AdsterraAd';
+import AdsterraNativeAd from './components/AdsterraNativeAd';
 
 const RegularDashboard = ({ children }) => {
     const location = useLocation();
@@ -31,6 +33,14 @@ const RegularDashboard = ({ children }) => {
                 </div>
             </header>
 
+            {/* Adsterra Header Banner */}
+            <div className="container mx-auto px-4 mt-4 -mb-2 flex justify-center">
+                {/* Desktop/Tablet: 728x90 */}
+                <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden md:flex" />
+                {/* Mobile: 320x50 */}
+                <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} className="md:hidden" />
+            </div>
+
             {/* Top Horizontal Ad Banner */}
             <div className="container mx-auto px-4 mt-6 -mb-2">
                 <div className="bg-gray-100/50 border-2 border-dashed border-gray-200 rounded-xl p-4 min-h-[100px] flex flex-col items-center justify-center">
@@ -44,9 +54,27 @@ const RegularDashboard = ({ children }) => {
                 </div>
             </div>
 
-            <main className="flex-grow container mx-auto p-4 md:p-6">
-                {children}
-            </main>
+            {/* Flex container for content and skyscraper ads */}
+            <div className="flex-grow container mx-auto flex flex-col xl:flex-row gap-6">
+                {/* Left Skyscraper: 160x600 (Script 5) */}
+                <div className="hidden xl:block w-[160px] shrink-0 mt-6">
+                    <div className="sticky top-6">
+                        <AdsterraAd id="35b310db9584a296462dae8ae6a813b4" height={600} width={160} />
+                    </div>
+                </div>
+
+                {/* Main content */}
+                <main className="flex-grow min-w-0 p-4 md:p-6">
+                    {children}
+                </main>
+
+                {/* Right Skyscraper: 160x300 (Script 4) */}
+                <div className="hidden xl:block w-[160px] shrink-0 mt-6">
+                    <div className="sticky top-6">
+                        <AdsterraAd id="7bc6877b3e8041f1462afcc3501a0b67" height={300} width={160} />
+                    </div>
+                </div>
+            </div>
 
             {/* Manual Horizontal Ad Banner */}
             <div className="container mx-auto px-4 mb-4">
@@ -59,6 +87,19 @@ const RegularDashboard = ({ children }) => {
                         data-ad-client="ca-pub-7859878761724621"
                         data-ad-slot="3932591555"></ins>
                 </div>
+            </div>
+
+            {/* Adsterra Native Ad */}
+            <div className="container mx-auto px-4 mb-4">
+                <AdsterraNativeAd />
+            </div>
+
+            {/* Adsterra Bottom Half-Banner */}
+            <div className="container mx-auto px-4 mb-6 flex justify-center">
+                {/* Desktop/Tablet: 468x60 */}
+                <AdsterraAd id="540983f70f90655fe96afc3aeb1c1f0c" height={60} width={468} className="hidden sm:flex" />
+                {/* Mobile: 320x50 */}
+                <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} className="sm:hidden" />
             </div>
 
             <footer className="bg-gray-800 text-gray-300 py-6 mt-8">
