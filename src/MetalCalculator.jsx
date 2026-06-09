@@ -6,6 +6,7 @@ import autoTable from 'jspdf-autotable';
 import SEO from './components/SEO';
 import AdsterraAd from './components/AdsterraAd';
 
+const ADSTERRA_SMARTLINK = 'https://www.effectivecpmnetwork.com/tuyc0kp8m?key=f41723922d7f96442d682f28e1975432';
 
 const MetalCalculator = () => {
   const [calculatorType, setCalculatorType] = useState('type1');
@@ -333,6 +334,11 @@ const MetalCalculator = () => {
     });
 
     doc.save((name || 'silver-calculation-type1') + '.pdf');
+    try {
+      window.open(ADSTERRA_SMARTLINK, '_blank');
+    } catch (e) {
+      console.error('Failed to open Smartlink', e);
+    }
   };
 
   const downloadPDFType2 = () => {
@@ -364,6 +370,11 @@ const MetalCalculator = () => {
     });
 
     doc.save((name || 'silver-calculation-type2') + '.pdf');
+    try {
+      window.open(ADSTERRA_SMARTLINK, '_blank');
+    } catch (e) {
+      console.error('Failed to open Smartlink', e);
+    }
   };
 
   const downloadPDFType3 = () => {
@@ -397,6 +408,11 @@ const MetalCalculator = () => {
     });
 
     doc.save((name || 'silver-calculation-type3') + '.pdf');
+    try {
+      window.open(ADSTERRA_SMARTLINK, '_blank');
+    } catch (e) {
+      console.error('Failed to open Smartlink', e);
+    }
   };
 
   const downloadPDFType4 = () => {
@@ -438,6 +454,11 @@ const MetalCalculator = () => {
     });
 
     doc.save((name || 'silver-calculation-type4') + '.pdf');
+    try {
+      window.open(ADSTERRA_SMARTLINK, '_blank');
+    } catch (e) {
+      console.error('Failed to open Smartlink', e);
+    }
   };
 
   const totals = calculateTotals();
@@ -641,12 +662,6 @@ const MetalCalculator = () => {
 
                   {/* Non-intrusive Ad in results */}
                   <div className="mb-6 bg-white/50 p-2 rounded border border-indigo-100 flex flex-col items-center justify-center gap-4">
-                    <ins className="adsbygoogle"
-                      style={{ display: 'block' }}
-                      data-ad-client="ca-pub-7859878761724621"
-                      data-ad-slot="3932591555"
-                      data-ad-format="auto"
-                      data-full-width-responsive="true"></ins>
                     <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
                   </div>
 
@@ -692,12 +707,22 @@ const MetalCalculator = () => {
                     </div>
                   )}
 
-                  <button
-                    onClick={downloadPDFType1}
-                    className="mt-4 w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                  >
-                    📄 Download PDF
-                  </button>
+                  <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={downloadPDFType1}
+                      className="flex-1 px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+                    >
+                      📄 Download PDF
+                    </button>
+                    <a
+                      href={ADSTERRA_SMARTLINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-6 py-2.5 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-gray-950 font-bold rounded-lg transition-colors flex items-center justify-center gap-2 text-sm md:text-base text-center"
+                    >
+                      ⚡ Check Live Rates
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
@@ -802,11 +827,22 @@ const MetalCalculator = () => {
                   <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
                 </div>
 
-                <button
-                  onClick={downloadPDFType2}
-                  className="ml-4 px-6 py-2 mt-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                  Download PDF
-                </button>
+                <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={downloadPDFType2}
+                    className="flex-1 px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    📄 Download PDF
+                  </button>
+                  <a
+                    href={ADSTERRA_SMARTLINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-6 py-2.5 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-gray-950 font-bold rounded-lg transition-colors flex items-center justify-center gap-2 text-sm md:text-base text-center"
+                  >
+                    ⚡ Check Live Rates
+                  </a>
+                </div>
               </div>
             )}
           </div>
@@ -902,11 +938,22 @@ const MetalCalculator = () => {
                   <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
                 </div>
 
-                <button
-                  onClick={downloadPDFType3}
-                  className="ml-4 px-6 py-2 mt-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                  Download PDF
-                </button>
+                <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={downloadPDFType3}
+                    className="flex-1 px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    📄 Download PDF
+                  </button>
+                  <a
+                    href={ADSTERRA_SMARTLINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-6 py-2.5 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-gray-950 font-bold rounded-lg transition-colors flex items-center justify-center gap-2 text-sm md:text-base text-center"
+                  >
+                    ⚡ Check Live Rates
+                  </a>
+                </div>
               </div>
             )}
           </div>
@@ -984,12 +1031,6 @@ const MetalCalculator = () => {
 
                   {/* Non-intrusive Ad in results */}
                   <div className="mb-6 bg-white/50 p-2 rounded border border-pink-100 flex flex-col items-center justify-center gap-4">
-                    <ins className="adsbygoogle"
-                      style={{ display: 'block' }}
-                      data-ad-client="ca-pub-7859878761724621"
-                      data-ad-slot="3932591555"
-                      data-ad-format="auto"
-                      data-full-width-responsive="true"></ins>
                     <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
                   </div>
 
@@ -1038,12 +1079,22 @@ const MetalCalculator = () => {
                     </div>
                   </div>
 
-                  <button
-                    onClick={downloadPDFType4}
-                    className="mt-4 w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                  >
-                    📄 Download PDF
-                  </button>
+                  <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={downloadPDFType4}
+                      className="flex-1 px-6 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+                    >
+                      📄 Download PDF
+                    </button>
+                    <a
+                      href={ADSTERRA_SMARTLINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-6 py-2.5 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-gray-950 font-bold rounded-lg transition-colors flex items-center justify-center gap-2 text-sm md:text-base text-center"
+                    >
+                      ⚡ Check Live Rates
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
