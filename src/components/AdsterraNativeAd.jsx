@@ -1,7 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const AdsterraNativeAd = () => {
     const containerRef = useRef(null);
+    const [refreshKey, setRefreshKey] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setRefreshKey((prev) => prev + 1);
+        }, 20000); // Refresh every 20 seconds
+
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -18,10 +27,10 @@ const AdsterraNativeAd = () => {
         const script = document.createElement('script');
         script.async = true;
         script.setAttribute('data-cfasync', 'false');
-        script.src = 'https://pl29575885.effectivecpmnetwork.com/b9b2a9a6f6688e5f74bea22aafdd1412/invoke.js';
+        script.src = `https://pl29575885.effectivecpmnetwork.com/b9b2a9a6f6688e5f74bea22aafdd1412/invoke.js?t=${Date.now()}`;
         
         containerRef.current.appendChild(script);
-    }, []);
+    }, [refreshKey]);
 
     return (
         <div className="my-6 p-4 bg-white rounded-xl shadow border border-gray-100 max-w-4xl mx-auto">
