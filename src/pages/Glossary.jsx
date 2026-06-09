@@ -1,6 +1,7 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
 import SEO from '../components/SEO';
+import AdsterraAd from '../components/AdsterraAd';
 
 const Glossary = () => {
     const terms = [
@@ -216,10 +217,18 @@ const Glossary = () => {
 
                 <div className="space-y-8">
                     {terms.map((item, index) => (
-                        <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-300 transition-colors">
-                            <h3 className="text-xl font-bold text-indigo-900 mb-2">{item.term}</h3>
-                            <p className="text-gray-700 leading-relaxed">{item.definition}</p>
-                        </div>
+                        <React.Fragment key={index}>
+                            {/* Insert ad block every 10 terms */}
+                            {index !== 0 && index % 10 === 0 && (
+                                <div className="flex justify-center my-6 py-4 bg-gray-50/50 rounded-2xl border border-dashed border-gray-200">
+                                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                                </div>
+                            )}
+                            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-300 transition-colors">
+                                <h3 className="text-xl font-bold text-indigo-900 mb-2">{item.term}</h3>
+                                <p className="text-gray-700 leading-relaxed">{item.definition}</p>
+                            </div>
+                        </React.Fragment>
                     ))}
                 </div>
 

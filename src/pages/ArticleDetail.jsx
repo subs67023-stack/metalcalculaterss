@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
 import SEO from '../components/SEO';
 import { articles } from '../data/articles';
+import AdsterraAd from '../components/AdsterraAd';
 
 const ArticleDetail = () => {
     const { id } = useParams();
@@ -49,21 +50,36 @@ const ArticleDetail = () => {
                         </div>
                     </div>
 
-                    <div className="p-8 md:p-12 prose prose-indigo max-w-none">
+                    <div className="p-8 md:p-12 prose prose-indigo max-w-none text-left">
                         {article.content.split('\n\n').map((paragraph, i) => {
-                            if (paragraph.startsWith('###')) {
-                                return <h3 key={i} className="text-2xl font-bold text-gray-900 mt-8 mb-4">{paragraph.replace('### ', '')}</h3>;
+                            const elements = [];
+                            
+                            // Insert ad after the 3rd paragraph (index 3)
+                            if (i === 3) {
+                                elements.push(
+                                    <div key="ad-in-article" className="my-8 flex justify-center py-4 bg-gray-50/50 rounded-2xl border border-dashed border-gray-200">
+                                        <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                                    </div>
+                                );
                             }
-                            if (paragraph.startsWith('1.') || paragraph.startsWith('-')) {
-                                return (
+
+                            let el;
+                            if (paragraph.startsWith('###')) {
+                                el = <h3 key={i} className="text-2xl font-bold text-gray-900 mt-8 mb-4">{paragraph.replace('### ', '')}</h3>;
+                            } else if (paragraph.startsWith('1.') || paragraph.startsWith('-')) {
+                                el = (
                                     <ul key={i} className="list-disc pl-6 space-y-2 my-4 text-gray-700">
                                         {paragraph.split('\n').map((li, j) => (
                                             <li key={j}>{li.replace(/^[0-9]\. |^- /, '')}</li>
                                         ))}
                                     </ul>
                                 );
+                            } else {
+                                el = <p key={i} className="text-gray-700 leading-relaxed mb-6 whitespace-pre-line">{paragraph}</p>;
                             }
-                            return <p key={i} className="text-gray-700 leading-relaxed mb-6 whitespace-pre-line">{paragraph}</p>;
+                            
+                            elements.push(el);
+                            return elements;
                         })}
                     </div>
                 </article>

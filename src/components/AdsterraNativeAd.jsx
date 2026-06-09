@@ -18,7 +18,7 @@ const AdsterraNativeAd = () => {
         const script = document.createElement('script');
         script.async = true;
         script.setAttribute('data-cfasync', 'false');
-        script.src = 'https://pl29675884.effectivecpmnetwork.com/b9b2a9a6f6688e5f74bea22aafdd1412/invoke.js';
+        script.src = 'https://pl29575885.effectivecpmnetwork.com/b9b2a9a6f6688e5f74bea22aafdd1412/invoke.js';
         
         containerRef.current.appendChild(script);
     }, []);

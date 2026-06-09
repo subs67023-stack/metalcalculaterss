@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
 import SEO from '../components/SEO';
 import { articles } from '../data/articles';
+import AdsterraAd from '../components/AdsterraAd';
 
 const Guides = () => {
     return (
@@ -23,29 +24,37 @@ const Guides = () => {
 
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
                     {articles.map((article, index) => (
-                        <Link key={index} to={`/guides/${article.id}`} className="block group">
-                            <article className="bg-white h-full rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:-translate-y-1">
-                                <div className="p-8">
-                                    <span className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-4 border border-indigo-200">
-                                        {article.tag}
-                                    </span>
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
-                                        {article.title}
-                                    </h2>
-                                    <p className="text-gray-600 leading-relaxed line-clamp-3">
-                                        {article.content.split('\n\n')[0]}
-                                    </p>
-                                    <div className="mt-8 flex items-center justify-between">
-                                        <div className="flex items-center text-sm font-semibold text-indigo-600">
-                                            Read More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                                        </div>
-                                        <div className="text-xs text-gray-400">
-                                            {article.date}
+                        <React.Fragment key={index}>
+                            {/* Insert ad after the first 2 guides (index 2 is the 3rd slot) */}
+                            {index === 2 && (
+                                <div className="col-span-1 md:col-span-2 flex justify-center py-4 bg-gray-50/50 rounded-2xl border border-dashed border-gray-200">
+                                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                                </div>
+                            )}
+                            <Link to={`/guides/${article.id}`} className="block group">
+                                <article className="bg-white h-full rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:-translate-y-1">
+                                    <div className="p-8">
+                                        <span className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-4 border border-indigo-200">
+                                            {article.tag}
+                                        </span>
+                                        <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                                            {article.title}
+                                        </h2>
+                                        <p className="text-gray-600 leading-relaxed line-clamp-3">
+                                            {article.content.split('\n\n')[0]}
+                                        </p>
+                                        <div className="mt-8 flex items-center justify-between">
+                                            <div className="flex items-center text-sm font-semibold text-indigo-600">
+                                                Read More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                            </div>
+                                            <div className="text-xs text-gray-400">
+                                                {article.date}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-                        </Link>
+                                </article>
+                            </Link>
+                        </React.Fragment>
                     ))}
                 </div>
 

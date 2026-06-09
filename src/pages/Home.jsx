@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import RegularDashboard from '../RegularDashboard';
 import SEOContent from '../components/SEOContent';
 import SEO from '../components/SEO';
+import AdsterraAd from '../components/AdsterraAd';
 
 const Home = () => {
     return (
@@ -77,6 +78,14 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Responsive Banner Ad 1 */}
+            <div className="my-10 flex justify-center">
+                {/* Desktop: 728x90 */}
+                <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden md:flex" />
+                {/* Mobile: 300x250 */}
+                <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} className="md:hidden" />
+            </div>
+
             {/* Educational Section (New) */}
             <section className="mb-20 bg-gray-50 -mx-4 md:-mx-6 px-4 md:px-12 py-16 rounded-3xl border border-gray-100">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -136,6 +145,14 @@ const Home = () => {
 
             {/* Guides and FAQs */}
             <SEOContent />
+
+            {/* Responsive Banner Ad 2 */}
+            <div className="my-10 flex justify-center">
+                {/* Desktop: 728x90 */}
+                <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden md:flex" />
+                {/* Mobile: 300x250 */}
+                <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} className="md:hidden" />
+            </div>
 
             {/* Bottom CTA */}
             <div className="mt-20 text-center bg-gray-900 rounded-2xl p-12 text-white shadow-2xl relative overflow-hidden">

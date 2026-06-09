@@ -1,6 +1,7 @@
 import React from 'react';
 import RegularDashboard from '../RegularDashboard';
 import SEO from '../components/SEO';
+import AdsterraAd from '../components/AdsterraAd';
 
 const Hallmarking = () => {
     const standards = [
@@ -49,6 +50,14 @@ const Hallmarking = () => {
                             ))}
                         </tbody>
                     </table>
+                </div>
+
+                {/* Ad between Table and Cards */}
+                <div className="my-10 flex justify-center">
+                    {/* Desktop: 728x90 */}
+                    <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden md:flex" />
+                    {/* Mobile: 300x250 */}
+                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} className="md:hidden" />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
