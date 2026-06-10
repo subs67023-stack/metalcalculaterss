@@ -221,7 +221,7 @@ const Glossary = () => {
                             {/* Insert ad block every 10 terms */}
                             {index !== 0 && index % 10 === 0 && (
                                 <div className="flex justify-center my-6 py-4 bg-gray-50/50 rounded-2xl border border-dashed border-gray-200">
-                                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                                    <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} />
                                 </div>
                             )}
                             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-indigo-300 transition-colors">

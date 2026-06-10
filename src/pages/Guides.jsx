@@ -28,7 +28,7 @@ const Guides = () => {
                             {/* Insert ad after the first 2 guides (index 2 is the 3rd slot) */}
                             {index === 2 && (
                                 <div className="col-span-1 md:col-span-2 flex justify-center py-4 bg-gray-50/50 rounded-2xl border border-dashed border-gray-200">
-                                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                                    <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} />
                                 </div>
                             )}
                             <Link to={`/guides/${article.id}`} className="block group">

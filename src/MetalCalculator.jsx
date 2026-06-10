@@ -662,7 +662,7 @@ const MetalCalculator = () => {
 
                   {/* Non-intrusive Ad in results */}
                   <div className="mb-6 bg-white/50 p-2 rounded border border-indigo-100 flex flex-col items-center justify-center gap-4">
-                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                    <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} />
                   </div>
 
                   <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-orange-500">
@@ -824,7 +824,7 @@ const MetalCalculator = () => {
                 </div>
 
                 <div className="flex justify-center my-4">
-                  <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                  <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} />
                 </div>
 
                 <div className="mt-4 flex flex-col sm:flex-row gap-3">
@@ -935,7 +935,7 @@ const MetalCalculator = () => {
                   </div>
                 </div>
                 <div className="flex justify-center my-4">
-                  <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                  <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} />
                 </div>
 
                 <div className="mt-4 flex flex-col sm:flex-row gap-3">
@@ -1031,7 +1031,7 @@ const MetalCalculator = () => {
 
                   {/* Non-intrusive Ad in results */}
                   <div className="mb-6 bg-white/50 p-2 rounded border border-pink-100 flex flex-col items-center justify-center gap-4">
-                    <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} />
+                    <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} />
                   </div>
 
                   {/* Step 1: Adjust to 52% */}

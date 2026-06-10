@@ -78,12 +78,11 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Responsive Banner Ad 1 */}
             <div className="my-10 flex justify-center">
                 {/* Desktop: 728x90 */}
                 <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden md:flex" />
-                {/* Mobile: 300x250 */}
-                <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} className="md:hidden" />
+                {/* Mobile: 320x50 */}
+                <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} className="md:hidden" />
             </div>
 
             {/* Educational Section (New) */}
@@ -146,12 +145,11 @@ const Home = () => {
             {/* Guides and FAQs */}
             <SEOContent />
 
-            {/* Responsive Banner Ad 2 */}
             <div className="my-10 flex justify-center">
                 {/* Desktop: 728x90 */}
                 <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden md:flex" />
-                {/* Mobile: 300x250 */}
-                <AdsterraAd id="4249f1d0e44db2160f85c5190d349ad7" height={250} width={300} className="md:hidden" />
+                {/* Mobile: 320x50 */}
+                <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} className="md:hidden" />
             </div>
 
             {/* Bottom CTA */}
