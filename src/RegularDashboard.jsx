@@ -4,7 +4,6 @@ import CookieBanner from './components/CookieBanner';
 import VisitorCounter from './components/VisitorCounter';
 import AdsterraAd from './components/AdsterraAd';
 import AdsterraNativeAd from './components/AdsterraNativeAd';
-import InfolinksAd from './components/InfolinksAd';
 
 const RegularDashboard = ({ children }) => {
 
@@ -95,10 +94,10 @@ const RegularDashboard = ({ children }) => {
                     {children}
                 </main>
 
-                {/* Right Skyscraper: Infolinks Skyscraper */}
+                {/* Right Skyscraper: 160x600 (Script 5) */}
                 <div className="hidden lg:block w-[160px] shrink-0 mt-6">
                     <div className="sticky top-6">
-                        <InfolinksAd id="infolinks-skyscraper-right" height={600} width={160} />
+                        <AdsterraAd id="35b310db9584a296462dae8ae6a813b4" height={600} width={160} />
                     </div>
                 </div>
             </div>
@@ -116,12 +115,12 @@ const RegularDashboard = ({ children }) => {
                 <AdsterraNativeAd />
             </div>
 
-            {/* Infolinks Bottom Banner */}
+            {/* Adsterra Bottom Half-Banner */}
             <div className="container mx-auto px-4 mb-6 flex justify-center">
                 {/* Desktop/Tablet: 728x90 */}
-                <InfolinksAd id="infolinks-banner-bottom-desktop" height={90} width={728} className="hidden sm:flex" />
+                <AdsterraAd id="1502e85f36541ef19586e922c225017a" height={90} width={728} className="hidden sm:flex" />
                 {/* Mobile: 320x50 */}
-                <InfolinksAd id="infolinks-banner-bottom-mobile" height={50} width={320} className="sm:hidden" />
+                <AdsterraAd id="b6932deef24a89da4e1e09cf6feab947" height={50} width={320} className="sm:hidden" />
             </div>
 
             <footer className="bg-gray-800 text-gray-300 py-6 mt-8">
